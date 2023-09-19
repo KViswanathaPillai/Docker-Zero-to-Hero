@@ -1,17 +1,17 @@
-FROM amazonlinux
+from amazonlinux
 
-WORKDIR /app
+workdir /app
 
-COPY requirements.txt /app
-COPY devops /app
+copy requirements.txt /app
+copy devops /app
 
-RUN yum-get update && \
+run yum-get update && \
     yum-get install -y python3 python3-pip && \
     pip install -r requirements.txt && \
     cd devops
 
-ENTRYPOINT ["python3"]
-CMD ["manage.py", "runserver", "0.0.0.0:8000"]
+entrypoint ["python3"]
+cmd ["manage.py", "runserver", "0.0.0.0:8000"]
 
 
 
