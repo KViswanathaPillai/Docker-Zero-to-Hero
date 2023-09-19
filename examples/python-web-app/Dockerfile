@@ -1,4 +1,4 @@
-FROM Amazonlinux
+FROM amazonlinux
 
 WORKDIR /app
 
